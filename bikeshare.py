@@ -72,7 +72,7 @@ def load_data(city, month, day):
        df = df.query('month == "' + str(month) + '"')
     
     if day != 'all' and day != '':
-       df = df.query('day == "' + day.title() + '"')
+       df = df[df['day'] == day.title()]
     
     return df
 
