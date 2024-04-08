@@ -129,11 +129,11 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
+    # Display total travel time
     total_travel_time = (df['Trip Duration'].dropna().sum())/60
     print('Total travel time: {} hour \n'.format(total_travel_time))
 
-    # TO DO: display mean travel time
+    # Display mean travel time
     mean_travel_time = (df['Trip Duration'].mean())/60
     print('Mean travel time: {} hour \n'.format(mean_travel_time))
 
@@ -147,16 +147,16 @@ def user_stats(df,city):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
+    # Display counts of user types
     user_type_count = df['User Type'].dropna().nunique()
     print('Counts of user types: {}\n'.format(user_type_count))
 
     if city != 'washington':
-        # TO DO: Display counts of gender
+        # Display counts of gender
         gender_count = df['Gender'].dropna().nunique()
         print('Counts of gender: {}\n'.format(gender_count))
 
-        # TO DO: Display earliest, most recent, and most common year of birth
+        # Display earliest, most recent, and most common year of birth
         earliest_birth_year = df['Birth Year'].dropna().min()
         print('The earliest year of birth: {}\n'.format(int(earliest_birth_year)))
 
@@ -211,6 +211,6 @@ def main():
         if restart.lower() != 'yes':
             break
 
-
+# run main fucntion
 if __name__ == "__main__":
 	main()
